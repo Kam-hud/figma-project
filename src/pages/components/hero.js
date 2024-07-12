@@ -25,13 +25,13 @@ const Hero = () => {
                 <p className="text-lg mb-6">{activeCategory.subtitle}</p>
 
                 {/* <div className="flex flex-wrap justify-center space-x-4"> */}
-                <div className="grid grid-cols-5 gap-4 justify-center mt-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center mt-10">
                     {categories.slice(0, 10).map((category, index) => (
                         <div
                             key={index}
                             onMouseEnter={() => setActiveCategory(category)}
                             onMouseLeave={() => setActiveCategory(categories[10])}
-                            className={`w-21 h-18 p-2 border border-black rounded-lg cursor-pointer mx-6 hover:bg-black hover:text-white ${activeCategory.name === category.name ? 'scale-105' : 'scale-100'}`}
+                            className={`w-full sm:w-32 h-10 md:w-40 h-18 lg:w-48 h-20 p-2 border border-black rounded-lg cursor-pointer mx-6 hover:bg-black hover:text-white ${activeCategory.name === category.name ? 'scale-105' : 'scale-100'}`}
                         >
                             <h2 className="text-sm font-semibold">{category.name}</h2>
                         </div>
